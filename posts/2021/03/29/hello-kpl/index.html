@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    LightSensor |  Nefelibata
+    Hello Kpl! |  Nefelibata
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -70,7 +70,7 @@ var _hmt = _hmt || [];
     <main class="content on">
       <section class="outer">
   <article
-  id="post-LightSensor"
+  id="post-hello-kpl"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -81,26 +81,22 @@ var _hmt = _hmt || [];
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  LightSensor
+  Hello Kpl!
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="../../../../../posts/2021/undefined/24/LightSensor/" class="article-date">
-  <time datetime="2021-04-23T19:31:03.000Z" itemprop="datePublished">2021-04-24</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="../../../../../categories/Homework/">Homework</a>
-  </div>
-  
+      <a href="../../../../../posts/2021/03/29/hello-kpl/" class="article-date">
+  <time datetime="2021-03-29T05:50:25.828Z" itemprop="datePublished">2021-03-29</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">1.3k</span>
+            <span class="post-count">0</span>
         </span>
     </span>
 
@@ -109,79 +105,21 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">5 min</span>
+            <span class="post-count">1 min</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1><center>光线传感器<center/></h1>
-<h3 id="实验目的">实验目的</h3>
-<p>本次实验的目的是让大家了解Android中光线传感器的基本知识，掌握Android中光线传感器的使用方法。</p>
-<h3 id="实验要求">实验要求</h3>
-<ol>
-<li>
-<p>了解Android中光线传感器基本知识</p>
-</li>
-<li>
-<p>掌握Android中光线传感器使用方法</p>
-</li>
-</ol>
-<h3 id="基础知识">基础知识</h3>
-<p>光线传感器基础</p>
-<p>光线传感器的好处是可以根据手机所处环境的光线来调节手机屏幕的亮度和键盘灯。例如在光线充足的地方屏幕会很亮，键盘灯就会关闭。相反如果在暗处，键盘灯就会亮，屏幕较暗（与屏幕亮度的设置也有关系），这样既保护了眼睛又节省了电量。光线传感器在进入睡眠模式时候会发出蓝色周期性闪动的光，非常美观。在本节的内容中，将详细讲解Android系统光线传感器的基本知识。<br>
-光线传感器介绍<br>
-在Android设备中，光线传感器通常位于前摄像头旁边的一个小点，如果在光线充足的情况下（室外或者是灯光充足的室内），大约在2～3秒之后键盘灯会自动熄灭，即使再操作机器键盘灯也不会亮，除非到了光线比较暗的地方才会自动地亮起来。如果在光线充足的情况下用手将光线感应器遮上，在2～3秒后键盘灯会自动亮起来，在此过程中光线感应器起到了一个节电的功能。<br>
-要想在Android设备中监听光线传感器，需要掌握如下所示的监听方法。</p>
-<ol>
-<li>registerListenr(SensorListenerlistenr,int sensors,int rate)：已过时。</li>
-<li>registerListenr(SensorListenerlistenr,int sensors)：已过时。</li>
-<li>registerListenr(SensorEventListenerlistenr,Sensor sensors,int rate)。</li>
-<li>registerListenr(SensorEventListenerlistenr,Sensor sensors,int rate,Handlerhandler)：因为SensorListener已经过时，所以相应的注册方法也过时了。</li>
-</ol>
-<p>在上述方法中，各个参数的具体说明如下所示。</p>
-<ul>
-<li>Listener：相应监听器的引用。</li>
-<li>Sensor：相应的感应器引用。</li>
-<li>Rate：感应器的反应速度，这个必须是系统提供的4个常量之一。</li>
-<li>SENSOR_DELAY_NORMAL：匹配屏幕方向的变化。</li>
-<li>SENSOR_DELAY_UI：匹配用户接口。</li>
-<li>SENSOR_DELAY_GAME：匹配游戏。</li>
-<li>SENSOR_DELAY_FASTEST.：匹配所能达到的最快。</li>
-</ul>
-<h3 id="实验内容">实验内容</h3>
-<p>按照实验的内容进行操作，掌握Android中光线传感器的使用方法等内容。<br>
-完成实验内容后，设计一个光线传感器的app，至少包含如下功能：</p>
-<ul>
-<li>显示当前光线传感器的光照强度；</li>
-<li>显示当前光线传感器的名称，耗电量，以及最大测量范围。</li>
-</ul>
-<p>获取上述参数方法如下：</p>
-<p>myS  =  mySm.getDefaultSensor(Sensor.TYPE_LIGHT);</p>
-<p>名称：myS.getName() ;</p>
-<p>耗电量（mA）：myS.getPower();</p>
-<p>最大测量范围：myS.getMaximumRange()</p>
-<h3 id="实验过程">实验过程</h3>
-<ol>
-<li>利用Android studio创建一个工程，并利用实体机或者安卓虚拟机进行测试（这里我先利用逍遥模拟器进行测试，成功之后，连接真机进行测试）</li>
-<li>修改activity_main.yml文件，新建一个静态文本控件用来输出我们要输出的亮度传感器的有关信息，这里新建工程初始化时会自动生成一个文本控件，文本内容默认为“Hello World！”，所以只需在其基础上进行修改即可</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">        android:id&#x3D;&quot;@+id&#x2F;textView1&quot;&#x2F;&#x2F;为控件添加编号textView1</span><br><span class="line">        android:layout_width&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">        android:text&#x3D;&quot;Hello World!&quot;&#x2F;&#x2F;初始化文本内容</span><br><span class="line">        app:layout_constraintBottom_toBottomOf&#x3D;&quot;parent&quot;</span><br><span class="line">        app:layout_constraintLeft_toLeftOf&#x3D;&quot;parent&quot;</span><br><span class="line">        app:layout_constraintRight_toRightOf&#x3D;&quot;parent&quot;</span><br><span class="line">        app:layout_constraintTop_toTopOf&#x3D;&quot;parent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>修改Mainactivity.java文件对传感器进行控制并进行文本输出</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;这里仅展示所需主要代码。具体代码见工程文件</span><br><span class="line">public class MainActivity extends Activity implements SensorEventListener &#123;</span><br><span class="line">    private SensorManager sensor;&#x2F;&#x2F;定义一个传感器管理器</span><br><span class="line">    private TextView text;&#x2F;&#x2F;定义一个文本控件</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;&#x2F;&#x2F;项目初始化函数</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        sensor &#x3D; (SensorManager)getSystemService(SENSOR_SERVICE);&#x2F;&#x2F;调用getSystemService函数来获取传感器控制权</span><br><span class="line">        text &#x3D; (TextView)findViewById(R.id.textView1);&#x2F;&#x2F;通过控件ID将实体文本控件与代码连接起来</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onSensorChanged(SensorEvent event) &#123;</span><br><span class="line">        &#x2F;&#x2F; 在传感器控制函数里面实现我们的功能</span><br><span class="line">        float[] values &#x3D; event.values; &#x2F;&#x2F;定义变量来获取事件的值</span><br><span class="line">        int sensorType &#x3D; event.sensor.TYPE_LIGHT; &#x2F;&#x2F;定义值为事件发生时的传感器变量值</span><br><span class="line">        if(sensorType&#x3D;&#x3D;Sensor.TYPE_LIGHT)&#123;&#x2F;&#x2F;如果对应系统中的亮度传感器，则证明是亮度发生变化</span><br><span class="line">            String detail&#x3D;&quot;\n传感器名称：&quot;+(event.sensor.getType()&#x3D;&#x3D;Sensor.TYPE_LIGHT?(event.sensor.getName()+&quot;\n中文名称：光照传感器&quot;):&quot;&quot;)+&quot;\n耗电量：&quot;+event.sensor.getPower()+&quot;\n最大测量范围：&quot;+event.sensor.getMaximumRange();&#x2F;&#x2F;定义字符串来实现输出，调用getName，getPower，getMaximumRange函数来获取传感器参数</span><br><span class="line">            text.setText(detail+&quot;\n当前光照强度：&quot;+String.valueOf(values[0])+&quot;Lux\n&quot;);&#x2F;&#x2F;将静态文本控件内容更新为传感器信息</span><br><span class="line">            text.setTextSize(30);&#x2F;&#x2F;设置字体大小</span><br><span class="line">            text.setTextColor(Color.parseColor(&quot;#ff5e9cff&quot;));&#x2F;&#x2F;#7E0C6E设置字体颜色</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="软件效果展示">软件效果展示</h3>
-<p><img src="https://i.loli.net/2021/04/24/OR4gjAQVUtnKr7z.png" alt="image-20210424025040667"></p>
+  <p><img src="https://i.loli.net/2021/04/07/BHgA5RqQeZTv8Wt.png" alt="image-20210407205253791"></p>
+<p><img src="https://ftp.bmp.ovh/imgs/2021/04/f2a64b655c8367e8.jpg" alt="lkp"></p>
  
       <!-- reward -->
       
@@ -246,32 +184,30 @@ var _hmt = _hmt || [];
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kpl0111.github.io/posts/2021/undefined/24/LightSensor/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kpl0111.github.io/posts/2021/03/29/hello-kpl/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/Android/" rel="tag">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../../tags/Homework/" rel="tag">Homework</a></li></ul>
-
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="../../../../../posts/2021/undefined/10/test/" class="article-nav-link">
+      <a href="../../../../../posts/2021/04/10/%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Test
+            可视化第一次作业
           
         </div>
       </a>
     
     
-      <a href="../../../../../posts/2021/undefined/13/Ucore_lab1/" class="article-nav-link">
+      <a href="../../../../../posts/2021/03/27/Hexo+Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Ucore_lab1</div>
+        <div class="article-nav-title">Hexo+Github搭建自己的博客</div>
       </a>
     
   </nav>
