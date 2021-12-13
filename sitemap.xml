@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/10/test/</loc>
+    
+    <lastmod>2021-12-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/13/Ucore_lab1/</loc>
+    
+    <lastmod>2021-05-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/24/LightSensor/</loc>
+    
+    <lastmod>2021-04-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/10/%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%9C%E4%B8%9A/</loc>
+    
+    <lastmod>2021-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/about/index.html</loc>
+    
+    <lastmod>2021-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/29/hello-kpl/</loc>
+    
+    <lastmod>2021-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/posts/2021/undefined/27/Hexo+Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
+    
+    <lastmod>2021-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/photos/index.html</loc>
+    
+    <lastmod>2021-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/friends/index.html</loc>
+    
+    <lastmod>2021-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://kpl0111.github.io/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/Hexo/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/Blog/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/Github/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/Android/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/Homework/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/MFC/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/tags/OS/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://kpl0111.github.io/categories/Blog/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kpl0111.github.io/categories/Homework/</loc>
+    <lastmod>2021-12-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
