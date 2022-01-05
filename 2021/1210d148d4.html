@@ -100,7 +100,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">4.5k</span>
+            <span class="post-count">8.9k</span>
         </span>
     </span>
 
@@ -109,7 +109,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">15 min</span>
+            <span class="post-count">31 min</span>
         </span>
     </span>
 </div>
@@ -124,8 +124,7 @@ var _hmt = _hmt || [];
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1>计算机网络</h1>
-<h2 id="概述">概述</h2>
+  <h2 id="概述">概述</h2>
 <p>IPV4：32位地址<br>
 IPv6：128位地址</p>
 <p>Internet三个重要理念：<br>
@@ -794,12 +793,517 @@ IPv6：128位地址</p>
 </ul>
 <h2 id="传输层协议">传输层协议</h2>
 <h3 id="传输层需要解决的基本问题">传输层需要解决的基本问题</h3>
+<ul>
+<li>网络层：将IP数据包从源主机传送到目的主机，提供无连接不可靠服务</li>
+<li>数据包传输存在的问题：延迟、乱序、出错、丢失等</li>
+<li>传输层解决的问题之一：可靠性，向应用层提供可靠服务</li>
+<li>应用层运行多个应用进程</li>
+<li>共享单一的网络层协议（IP）和网络接口</li>
+<li>传输层解决的问题之二：复用（Multiplexing）和分用（Demultiplexing）</li>
+</ul>
 <h3 id="tcp-ip体系结构中传输层协议与服务">TCP/IP体系结构中传输层协议与服务</h3>
+<p>传输层协议的基本功能</p>
+<ul>
+<li>复用和分用</li>
+<li>可靠性保证</li>
+</ul>
+<p>传输层实体执行的动作</p>
+<ul>
+<li>发送端：将应用层的消息封装成传输层的数据单元，传递到网络层</li>
+<li>接收端：将从网络层接收的传输层数据单元，处理后交给应用层</li>
+</ul>
+<p>传输控制协议TCP（Transport Control Protocol）</p>
+<ul>
+<li>为进程间通信提供面向连接的、可靠的传输服务</li>
+<li>实现复用分用、差错检测、确认重传、流量控制等传输层功能</li>
+</ul>
+<p>用户数据报协议UDP（User Datagram Protocol）</p>
+<ul>
+<li>为进程间通信提供非连接的、不可靠的传输服务</li>
+<li>实现复用分用、差错检测等传输层功能</li>
+</ul>
 <h3 id="用户数据报协议-udp">用户数据报协议（UDP）</h3>
+<p>UDP协议特点</p>
+<ul>
+<li>发送方和接收方<strong>不需要握手过程</strong></li>
+<li>每个UDP数据单元（数据报）<strong>独立传输</strong></li>
+<li>提供复用分用功能和<strong>可选</strong>的差错检测功能</li>
+<li>支持组播通信（点到多点通信）</li>
+<li>不提供可靠性保证：无确认重传、可能有出错、丢失、乱序等现象</li>
+</ul>
+<p>UDP数据报格式</p>
+<ul>
+<li>长度：包含头部、以字节计数</li>
+<li>校验和：为可选项，用于差错检测</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/cXEOlLAbGeoQTRC.png" alt="image-20211231075450673"></p>
+<p>进程标识：目的IP地址+目的端口号</p>
+<p>UDP数据报的差错检测</p>
+<ul>
+<li>可选项，利用数据报中携带冗余位（校验和域段）来检测数据报传输过程中出现的差错</li>
+<li>发送端：利用自己产生的伪首部和发送的UDP数据报计算校验和</li>
+<li>接收端：利用自己产生的伪首部和接收的UDP数据报计算校验和</li>
+<li>伪首部：包含源IP地址、目的IP地址、协议类型等域段</li>
+<li><img src="https://s2.loli.net/2021/12/31/QHyv8zbWYxZO1IU.png" alt="image-20211231080125754"></li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/S2rTLfn47j8Zypi.png" alt="image-20211231080316195"></p>
+<p><img src="https://s2.loli.net/2021/12/31/PXY8N91el32xR4o.png" alt="image-20211231080615368"></p>
+<p>UDP校验和计算几点说明</p>
+<ul>
+<li>IPv4中UDP校验和是可选项，IPv6中变成强制项
+<ul>
+<li>0无，非0有（如果计算结果为0，则以全1代替）</li>
+</ul>
+</li>
+<li>UDP校验和覆盖的范围超出了UDP数据报本身，使用伪首部的目的是检验UDP数据报是否到达真正的目的地
+<ul>
+<li>正确的目的地包括了特定的主机和该主机上特定的端口</li>
+</ul>
+</li>
+<li>伪首部不随用户数据报一起传输，接收方需自己形成伪首部进行校验</li>
+<li>伪首部的使用破坏了层次划分的基本前提，即每一层的功能独立
+<ul>
+<li>目的主机的IP地址UDP通常知道，源IP的使用需要通过路由选择决定</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">u_short <span class="title">cksum</span><span class="params">(u_short *buf, <span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">  <span class="keyword">register</span> u_long sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> (count--)&#123;</span><br><span class="line">    sum += *buf++;</span><br><span class="line">    <span class="keyword">if</span> (sum &amp; <span class="number">0XFFFF0000</span>)&#123;</span><br><span class="line">      sum &amp;= <span class="number">0XFFFF</span>;</span><br><span class="line">      sum++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Return ~(sum &amp; <span class="number">0XFFFF</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>IP首部、ICMP、UDP、TCP都需要计算校验和，方法类似</p>
+<p>使用UDP服务的应用：</p>
+<ul>
+<li>流媒体应用（实时音频和视频）通常使用UDP服务
+<ul>
+<li>能够容忍一定的丢失</li>
+<li>对时延敏感</li>
+</ul>
+</li>
+<li>其他使用UDP服务的应用，如：
+<ul>
+<li>DNS</li>
+<li>SNMP</li>
+</ul>
+</li>
+<li>需要在UDP之上实现可靠传输，即在应用层增加可靠机制</li>
+</ul>
+<p>为什么提供UDP服务？</p>
+<ul>
+<li>不需要建立连接，建立连接需要增加延时，特别对于简单的交互应用</li>
+<li>协议简单：在发送端和接收端不需要维护连接状态</li>
+<li>数据报头部短，额外开销小</li>
+<li>无拥塞控制</li>
+</ul>
 <h3 id="可靠数据传输">可靠数据传输</h3>
+<p>rdt：reliable data transfer protocol（可靠数据传输协议）</p>
+<p>停等机制：发送端发送一个分组，然后等待接收端响应</p>
+<p>两种典型的流水线协议：</p>
+<ul>
+<li>回退N：Go-Back-N (GBN)
+<ul>
+<li>允许发送端发出N个未得到确认的分组</li>
+<li>需要增加序列号范围
+<ul>
+<li>分组首部中增加k位的序列号，序列号空间为[0, 2k-1]</li>
+</ul>
+</li>
+<li>采用累积确认，只确认连续正确接收分组的最大序列号
+<ul>
+<li>可能接收到重复的ACK</li>
+<li>发送端设置定时器，定时器超时时，重传所有未确认的分组</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/klQUiJLCaKuSwcD.png" alt="image-20211231082548837"></p>
+<ul>
+<li>选择重传：Selective Repeat (SR)
+<ul>
+<li>接收端独立确认每个正确接收的分组，必要时缓存分组，对高层按序交付</li>
+<li>每个分组独立定时，发送端只重传未收到ACK的分组</li>
+<li>过程
+<ul>
+<li>发送端
+<ul>
+<li>接收上层数据：如果发送窗口中有可用的序号，则发送分组</li>
+<li>超时(n)：重传分组n，重启定时器</li>
+<li>接收ACK(n)：n在[send_base, send_base+N-1]区间，将分组n标记为已接收，如果是窗口中最小的未确认的分组，则窗口向前滑动，基序号为下一个未确认分组的序号</li>
+</ul>
+</li>
+<li>接收端：接收分组n：
+<ul>
+<li>n在[rcv_base, rcv_base+N-1]区间，发送ACK(n)，缓存失序分组，按序到达的分组交付给上层，窗口向前滑动</li>
+<li>n在[rcv_base-N, rcv_base-1]区间，发送ACK(n)<br>
+<img src="https://s2.loli.net/2021/12/31/zkCltjSLX1QEqVu.png" alt="image-20211231082946085"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="传输控制协议-tcp">传输控制协议（TCP）</h3>
+<p>TCP协议特点提供可靠服务：按序、可靠交付</p>
+<ul>
+<li>提供字节流服务，不识别消息边界可靠传输机制</li>
+<li>提供差错检测（校验和）功能，正确接收返回确认</li>
+<li>使用序列号检测丢失和乱序</li>
+<li>超时重传机制，解决出错、丢失问题</li>
+<li>支持流水线机制，自适应窗口</li>
+<li>面向连接：发送数据之前发送方和接收方之间需要握手
+<ul>
+<li>三次握手建立连接</li>
+<li>初始化所需的参数及分配缓冲区</li>
+</ul>
+</li>
+<li>提供复用分用功能</li>
+<li><strong>只提供点对点通信</strong></li>
+<li>具有<strong>流量控制</strong>和<strong>拥塞控制</strong>功能</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/4OPMgFIq6tH5Vda.png" alt="image-20211231151005112"></p>
+<ul>
+<li>头长度：四个字节为计数单位，包含选项部分</li>
+<li>接收窗口通告：指示接收缓冲区可接收的字节数</li>
+<li>标志位：URG, ACK, PUSH, RESET, SYN, FIN</li>
+<li>选项格式：Kind（1字节）|Length（1字节）|Info（n字节）</li>
+</ul>
+<p>TCP连接与复用、分用机制</p>
+<ul>
+<li>通信之前通过三次握手建立TCP连接
+<ul>
+<li>分配缓冲区、协商参数（初始序号、接收缓冲区大小、最大段尺寸等）</li>
+</ul>
+</li>
+<li>连接标识（四元组）：源IP地址、目的IP地址、源端口号、目的端口号</li>
+<li>通过建立的TCP连接为应用进程提供可靠的字节流服务</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/PSk5mrhXMDI2wA8.png" alt="image-20211231153628750"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件</th>
+<th style="text-align:center">TCP接收端动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">期望序号的报文段按序到达，之前的报文段均已被确认</td>
+<td style="text-align:center">延迟发送ACK，等待下一个报文段到达；等500毫秒，仍未收到下一个报文段，则发送ACK</td>
+</tr>
+<tr>
+<td style="text-align:center">期望序号的报文段按序到达，之前有一个延迟确认的报文段</td>
+<td style="text-align:center">发送ACK，确认两个按序到达的报文段</td>
+</tr>
+<tr>
+<td style="text-align:center">报文段未按序到达，到达的报文段序号高于期望的序号，数据流不连续</td>
+<td style="text-align:center">发送重复ACK，确认序号中包含期望接收的序号</td>
+</tr>
+<tr>
+<td style="text-align:center">到达的报文段填补了之前数据流不连续部分</td>
+<td style="text-align:center">发送ACK，确认序号中包含期望接收的序号</td>
+</tr>
+</tbody>
+</table>
+<p>TCP采用自适应方法计算重传超时时间（原因？）</p>
+<ul>
+<li>基于往返时间（RTT）确定重传超时间（RTO）</li>
+</ul>
+<p>问题：如何准确估算</p>
+<ul>
+<li>上一次RTT可以测得，下一次RTT需要估算</li>
+<li>网络拥塞和路由变化，每次往返时间可能不同，有时会有较大变化</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/GJ8SaATt97lKnkL.png" alt="image-20211231163820280"></p>
+<p>流量控制的目的：避免发送端发送数据过快，接收端不能及时处理，造成接收缓冲区溢出</p>
+<ul>
+<li>增加流控功能后，发送窗口还需要受接收能力的约束</li>
+</ul>
+<p>可变的滑动窗口：接收端利用“接收窗口通告”域段告知发送端接收端缓冲区剩余的空间，发送端依据该通告调整发送窗口的大小</p>
+<p><img src="https://s2.loli.net/2021/12/31/i284GfTShLI6HQn.png" alt="image-20211231221341669"></p>
+<p>接收窗口大小对性能的影响</p>
+<ul>
+<li>较小的缓冲区会影响网络的吞吐率</li>
+<li>过大的缓冲区会浪费主机的存储资源</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/2TpMvr9eWJHzQyF.png" alt="image-20211231223846068"></p>
+<p><img src="https://s2.loli.net/2021/12/31/LusX27OZbCENlR9.png" alt="image-20211231224024602"></p>
+<p>连接的半打开状态：连接的一端存在、而另一端不存在</p>
+<ul>
+<li>当一个进程终止连接未能通知到另一方时，例如：掉电、异常关闭等</li>
+</ul>
+<p>TCP定时器:</p>
+<ul>
+<li>连接建立定时器（75秒）</li>
+<li>重传定时器（RTO）</li>
+<li>延迟ACK定时器（500毫秒）</li>
+<li>持续定时器（避免0窗口死锁）</li>
+<li>保活定时器（避免半打开）</li>
+<li>静默定时器（避免端口号重用等）</li>
+</ul>
 <h3 id="理解网络拥塞">理解网络拥塞</h3>
+<p>拥塞控制方法：两种广泛使用的拥塞控制方法</p>
+<ul>
+<li>端到端拥塞控制
+<ul>
+<li>网络中无明确的反馈</li>
+<li>端系统通过观察丢失、延迟推断是否发生拥塞</li>
+<li>TCP采用的拥塞控制策略</li>
+</ul>
+</li>
+<li>网络辅助的拥塞控制
+<ul>
+<li>路由器提供到端系统的反馈</li>
+<li>例如：可以使用1位指示拥塞（如X.25, ATM）</li>
+</ul>
+</li>
+</ul>
 <h3 id="tcp拥塞控制机制">TCP拥塞控制机制</h3>
+<p>带宽探测：接收到ACK提高传输速率，发生丢失事件降低传输速率</p>
+<ul>
+<li>ACK返回：说明网络并未拥塞，可以继续提高发送速率</li>
+<li>丢失事件：假设所有丢失是由于拥塞造成的，降低发送速率</li>
+</ul>
+<p>TCP拥塞控制控制窗口：采用基于窗口的方法，通过拥塞窗口的增大或减小控制发送速率</p>
+<p><img src="https://s2.loli.net/2021/12/31/fMoXjtWZzKB8lNx.png" alt="image-20211231225911836"></p>
+<p>实际发送窗口取决于接收通告窗口和拥塞控制窗口中较小值</p>
+<p>TCP拥塞控制</p>
+<ul>
+<li>慢启动阶段
+<ul>
+<li>初始拥塞窗口：cwnd=1(MSS)</li>
+<li>每个RTT，cwnd翻倍（指数增长）</li>
+<li>每接收到一个ACK，cwnd增1(MSS)</li>
+<li>当<strong>连接初始建立</strong>或<strong>报文段超时未得到确认时</strong>，TCP拥塞控制进入慢启动阶段</li>
+<li>特点：<strong>初始值小，增长速度快</strong></li>
+</ul>
+</li>
+<li>拥塞避免阶段
+<ul>
+<li>阈值ssthresh：拥塞窗口达到该阈值时，慢启动阶段结束，进入拥塞避免阶段</li>
+<li>每个RTT，cwnd增1（线性增长）</li>
+<li>注意：TCP使用字节计数，当收到ACK时，拥塞窗口计算如下：
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi><mo>=</mo><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi><mo>+</mo><mi>M</mi><mi>S</mi><mi>S</mi><mo>×</mo><mfrac><mrow><mi>M</mi><mi>S</mi><mi>S</mi></mrow><mrow><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">cwnd = cwnd + MSS \times \frac{MSS}{cwnd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span><span class="mord mathdefault mtight" style="margin-right:0.02691em;">w</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">d</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>丢失检测
+<ul>
+<li>通过超时检测丢失：
+<ul>
+<li>阈值ssthresh = cwnd/2</li>
+<li>cwnd=1，进入慢启动阶段</li>
+</ul>
+</li>
+<li>通过三次重复ACK检测丢失（TCP RENO算法）：
+<ul>
+<li>阈值ssthresh = cwnd/2</li>
+<li>cwnd= ssthresh+3，进入线性增长（拥塞避免阶段）</li>
+<li>注：重复ACK指明网络仍可以交付一些报文段（拥塞不严重）</li>
+</ul>
+</li>
+<li>TCP Tahoe算法对于两种丢失情况均将cwnd设成1，并进入慢启动阶段</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络层协议">网络层协议</h2>
+<h3 id="网络层功能">网络层功能</h3>
+<p>网络层功能部署</p>
+<ul>
+<li>网络层在每台主机和路由器中实现</li>
+<li>发送端：将传输层数据单元封装在数据包中</li>
+<li>接收端：解析接收的数据包中，取出传输层数据单元，交付给传输层</li>
+<li>路由器：检查数据包首部，转发数据包</li>
+</ul>
+<p>网络层关键功能</p>
+<ul>
+<li>路由（控制面）: 决定数据包从源主机到目的主机的路径核心：路由算法与路由协议</li>
+<li>转发（数据面）: 将数据包从路由器的输入接口送到输出接口的过程</li>
+</ul>
+<h3 id="ip协议-ip服务">IP协议- IP服务</h3>
+<p>IP层服务</p>
+<ul>
+<li>面向无连接的数据报服务
+<ul>
+<li>不需要提前建立连接</li>
+<li>数据包基于目的主机地址进行转发</li>
+<li>数据包独立转发，相同源-目的的数据包可能经过不同的路径</li>
+</ul>
+</li>
+<li>尽力而为（Best-effort）的不可靠服务
+<ul>
+<li>数据包可能会产生较长的时延</li>
+<li>数据包可能会丢失、失序、重复</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/2wFgTdesuCoBxpj.png" alt="image-20211231232948070"></p>
+<h4 id="ipv4">IPv4</h4>
+<p>IPv4地址</p>
+<ul>
+<li>IP地址：32位二进制逻辑地址（四部分，0~255），实现互联网络统一编址，标识主机和路由器的接口</li>
+<li>接口：将主机和路由器连接到物理网络
+<ul>
+<li>路由器一般有多个接口</li>
+<li>主机可以有一个或多个接口</li>
+<li>IP与物理接口绑定</li>
+</ul>
+</li>
+<li>IP地址表示：点分割的十进制，如：223.1.1.1</li>
+<li>IP地址层次：
+<ul>
+<li>网络号部分（net-id）</li>
+<li>主机号部分（host-id）</li>
+</ul>
+</li>
+<li>什么是一个IP网络：
+<ul>
+<li>位于同一个物理网络</li>
+<li>设备接口的IP地址的网络号部分相同，主机号部分不同</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2021/12/31/Qq97R3rbdh5zA8U.png" alt="image-20211231233725315"></p>
+<p><img src="https://s2.loli.net/2021/12/31/FEDiy6RS3QOM4tV.png" alt="image-20211231234113153"></p>
+<p>IPv4地址：如何获取</p>
+<ul>
+<li>公有IP地址要求全球唯一，由区域互联网注册机构（RIR，Regional Internet Registry）或ISP分配</li>
+<li>静态设定：
+<ul>
+<li>申请固定IP地址，手工设定</li>
+</ul>
+</li>
+<li>动态获取：
+<ul>
+<li>使用DHCP协议或其他动态配置协议</li>
+<li>当主机加入IP网络，允许主机从DHCP服务器动态获取IP地址</li>
+<li>可以有效利用IP地址，方便移动主机的地址获取</li>
+</ul>
+</li>
+</ul>
+<p>路由器转发IP数据包过程：总结</p>
+<ul>
+<li>路由器确定IP数据包中目的地址的网络号</li>
+<li>如果目的主机与路由器属于相同的IP网络，则直接转发到目的主机</li>
+<li>如果目的主机与路由器不属于相同的IP网络，则查找路由表，确定下一跳路由器地址
+<ul>
+<li>如果存在相应的路由信息，则转发</li>
+<li>如果没有相应的路由信息，则丢弃</li>
+</ul>
+</li>
+<li>减小TTL值，修改首部的校验和</li>
+<li>将数据包转发到相应的接口</li>
+</ul>
+<p>无类地址划分CIDR: Classless Inter-Domain Routing</p>
+<ul>
+<li>IP地址分为前缀和后缀两部分
+<ul>
+<li>一个前缀不一定标识一个物理网络</li>
+</ul>
+</li>
+<li>前缀可以是任意长度，前缀和后缀长度用32位掩码标识
+<ul>
+<li>也可以表示成：a.b.c.d /x，x为前缀长度</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/01/01/Hpgju3D9dzIW81x.png" alt="image-20220101020031705"></p>
+<p>私有IP地址和NAT</p>
+<ul>
+<li>私有IP地址的使用
+<ul>
+<li>可以在私有网络（本地网络）中自由使用，但不能出现在公网上</li>
+<li>如果数据包要进入公网，需要进行私有地址到公有地址的转换</li>
+<li>承担地址转换的设备称为NAT（Network Address Translation）</li>
+</ul>
+</li>
+<li>本地网络使用私有IP地址，NAT 面向公网侧使用公网IP地址
+<ul>
+<li>只需要一个或少量的公网IP地址</li>
+<li>公网IP地址变化，不影响本地网络地址配置</li>
+<li>安全性增强</li>
+</ul>
+</li>
+<li>NAT 的基本实现方法离开本地网络的数据包：用（NAT 的IP地址+新端口号）代替（源IP地址+端口号），远端的主机返回的数据包将使用（NAT 的IP地址+新端口号）作为目的IP地址和目的端口
+<ul>
+<li>NAT 在转换表中记录（NAT 的IP地址+新端口号）到（源IP地址+端口号）的映射</li>
+</ul>
+</li>
+<li>进入本地网络的数据包：用转换表中的（源IP地址+端口号）替换数据包中的目的IP地址和端口号（NAT 的IP地址+新端口号）</li>
+</ul>
+<h4 id="ipv6">IPv6</h4>
+<p>IPv6互联网的优势</p>
+<ul>
+<li>解决地址耗尽问题：更大的地址空间（32位→128位）
+<ul>
+<li>340,282,366,920,938,463,463,374,607,431,768,211,456个IP地址</li>
+<li>地球上每平方米范围：6.67×1023个IP地址</li>
+</ul>
+</li>
+<li>自动配置的支持（即插即用）
+<ul>
+<li>无状态地址自动配置</li>
+<li>有状态地址自动配置：对DHCP协议改进和扩展，网络管理更加方便和快捷</li>
+</ul>
+</li>
+<li>改善网络性能
+<ul>
+<li>IP包头的合理改善，提高了路由器对数据包的处理速率</li>
+<li>路由聚合，使路由表更小，提高转发效率</li>
+</ul>
+</li>
+<li>方便各项业务开展
+<ul>
+<li>无需使用NAT 设备</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/01/01/EHaehtWOXU5zMmp.png" alt="image-20220101022814088"></p>
+<ul>
+<li>IPv6数据包由一个IPv6基本头、多个扩展头和上层数据单元组成</li>
+<li>IPv6基本头：40字节固定长度，包含了发送和转发该数据包必须处理的一些字段</li>
+<li>IPv6数据包可以包含0个或多个扩展头，扩展头位于基本头之后</li>
+<li>基本头和扩展头中“下一包头”字段指出下一个扩展头的类型。最后一个扩展头中的“下一包头”字段指出高层协议的类型</li>
+<li><img src="https://s2.loli.net/2022/01/01/xR4hdkFtozbDsji.png" alt="image-20220101022954509"></li>
+<li>128位地址：由冒号分开的8组十六进制字段组成</li>
+<li><img src="https://s2.loli.net/2022/01/01/NeX9lOsSE5nIpuZ.png" alt="image-20220101023110999"></li>
+<li>完全形式：1080:0000:0000:0000:0008:0800:200C:417A</li>
+<li>圧缩形式：1080:0:0:0:8:800:200C:417A / 1080::8:800:200C:417A
+<ul>
+<li>地址段中有时会出现连续的几组0，这时这些0可以用“::”代替，但一个地址中只能出现一次“::“，例如：FF01:0:0:0:0:0:0:101=FF01::101，0:0:0:0:0:0:0:1=::1</li>
+</ul>
+</li>
+<li>内嵌IPv4地址的IPv6地址：0:0:0:0:0:0:61.1.133.1 或::61.1.133.1</li>
+<li>URL的IPv6地址表示：https://[2001:410:0:1:250:fcee:e450:33ab]:8443/abc.html</li>
+</ul>
+<h3 id="icmp协议">ICMP协议</h3>
+<p>ICMP: 互联网控制消息协议</p>
+<p><img src="https://s2.loli.net/2022/01/01/726xsaDrmcMYtlK.png" alt="image-20220101040334497"></p>
+<h3 id="路由算法-控制面">路由算法（控制面）</h3>
+<p>目标：确定从源主机到目的主机的最优路径</p>
+<p>最优路径：一般为代价最小的路径代价：有不同的定义方法，例如：距离、时延、费用、拥塞等</p>
+<p>路由算法的分布式实现</p>
+<ul>
+<li>路由器之间交互路由信息或链路状态信息</li>
+<li>每台路由器独立计算最优路径</li>
+</ul>
+<p>相对于数据包转发，所有路由协议的开销都属于额外管理开销</p>
+<h3 id="互联网路由协议：rip-ospf-bgp">互联网路由协议：RIP, OSPF, BGP</h3>
+<h3 id="软件定义网络-sdn">软件定义网络（SDN）</h3>
+<h2 id="接口层原理与协议">接口层原理与协议</h2>
+<ul>
+<li>接口层提供同一物理网络中各节点之间的连接和通信</li>
+<li>同一个物理网络必须执行相同的接口层协议</li>
+<li>不同的物理网络接口层协议可以不同</li>
+</ul>
+<h3 id="接口层基础">接口层基础</h3>
+<p>物理网络连接方式：节点到节点连接、共享式连接、交换式连接</p>
+<h3 id="局域网体系结构与组网方法">局域网体系结构与组网方法</h3>
+<h3 id="局域网编址与arp协议">局域网编址与ARP协议</h3>
+<h3 id="链路层差错控制">链路层差错控制</h3>
+<h3 id="共享式与交换式以太网">共享式与交换式以太网</h3>
+<h3 id="虚拟局域网">虚拟局域网</h3>
+<h3 id="无线局域网">无线局域网</h3>
  
       <!-- reward -->
       
