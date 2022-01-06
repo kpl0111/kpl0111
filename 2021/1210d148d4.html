@@ -100,7 +100,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">8.9k</span>
+            <span class="post-count">11.8k</span>
         </span>
     </span>
 
@@ -109,7 +109,7 @@ var _hmt = _hmt || [];
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">31 min</span>
+            <span class="post-count">42 min</span>
         </span>
     </span>
 </div>
@@ -132,7 +132,7 @@ IPv6：128位地址</p>
 ➢ 互联网的自组织理念<br>
 ➢ 互联网的分享理念</p>
 <p>统计多路复用：主机A和B的报文分组没有固定的到达模式，带宽按需共享，这<br>
-种方式称为统计多路复用（statistical multiplexing）</p>
+种方式称为统计多路复用(statistical multiplexing)</p>
 <p>网络流量具有很强的突发性，即不平稳，每个独立的流的峰值可能出现在不同时间</p>
 <ul>
 <li>结论：流越多，网络平均流量越平滑</li>
@@ -180,7 +180,7 @@ IPv6：128位地址</p>
 <p><img src="https://s2.loli.net/2021/12/30/7tWiPUJMr5pfYGh.png" alt=""></p>
 <p>网络协议的组成要素：</p>
 <ul>
-<li>语法：数据与控制信息的结构或格式（协议数据单元PDU）</li>
+<li>语法：数据与控制信息的结构或格式(协议数据单元PDU)</li>
 <li>语义：需要发出何种控制信息，完成何种动作以及做出何种响应</li>
 <li>时序：事件实现顺序的详细说明</li>
 </ul>
@@ -189,11 +189,11 @@ IPv6：128位地址</p>
 <h3 id="应用协议与进程通信模型">应用协议与进程通信模型</h3>
 <p>应用：可进行通信的、分布式进程<br>
 ➢ 运行于主机的用户空间<br>
-➢ 通过交换消息（Messages）实现应用之间的交互<br>
+➢ 通过交换消息(Messages)实现应用之间的交互<br>
 ➢ 例如：Email、Web等</p>
 <p>应用层协议：应用层实体之间的通信规范<br>
 ➢ 定义应用交换的消息和收到消息后采取的行动<br>
-➢ 使用下层协议（TCP、UDP）提供的通信服务</p>
+➢ 使用下层协议(TCP、UDP)提供的通信服务</p>
 <ul>
 <li>内容：
 <ul>
@@ -258,21 +258,21 @@ IPv6：128位地址</p>
 </ul>
 </li>
 </ul>
-<p><strong>主机的地址标识</strong>:主机拥有一个唯一的32位的IPv4地址（或128位的IPv6地址）<br>
+<p><strong>主机的地址标识</strong>:主机拥有一个唯一的32位的IPv4地址(或128位的IPv6地址)<br>
 <strong>进程标识符</strong>：包括IP地址和端口号</p>
 <ul>
 <li>端口号举例:
 <ul>
 <li>Web服务器进程: 80</li>
-<li>Email（SMTP）服务器进程: 25</li>
+<li>Email(SMTP)服务器进程: 25</li>
 </ul>
 </li>
 </ul>
 <h3 id="进程间通信">进程间通信</h3>
 <p>进程：主机中运行的程序</p>
-<p>在同一台主机中，两个进程之间按照进程间通信方式进行交互通信（操作系统中定义）<br>
+<p>在同一台主机中，两个进程之间按照进程间通信方式进行交互通信(操作系统中定义)<br>
 不同主机上的进程通信，需要通过交换信息来完成</p>
-<p>客户/服务器（C/S）模型</p>
+<p>客户/服务器(C/S)模型</p>
 <ul>
 <li>客户向服务器发出服务请求，并接收服务器的响应；服务器等待客户的请求并为客户提供服务</li>
 <li>例如：Web浏览器/Web服务器；Email客户端/Email服务器</li>
@@ -297,9 +297,9 @@ IPv6：128位地址</p>
 </ul>
 </li>
 </ul>
-<p>对等计算（P2P）模型</p>
+<p>对等计算(P2P)模型</p>
 <ul>
-<li>最小化（或根本不用）专用服务器</li>
+<li>最小化(或根本不用)专用服务器</li>
 <li>例如：Skype, BitTorrent等</li>
 <li>过程
 <ul>
@@ -333,16 +333,16 @@ IPv6：128位地址</p>
 <p>accept():流方式</p>
 </li>
 <li>
-<p>connect（）：流方式</p>
+<p>connect()：流方式</p>
 </li>
 <li>
-<p>recv（）：流方式</p>
+<p>recv()：流方式</p>
 </li>
 <li>
-<p>sendto（）：数据报方式</p>
+<p>sendto()：数据报方式</p>
 </li>
 <li>
-<p>recvfrom（）：数据报方式</p>
+<p>recvfrom()：数据报方式</p>
 </li>
 </ul>
 <p>常见CPU的字节序</p>
@@ -422,7 +422,7 @@ IPv6：128位地址</p>
 <li>基于TCP/IP的文件传输系统</li>
 <li>客户/服务器模型
 <ul>
-<li>client: 初始化传输（无论上传还是下载）</li>
+<li>client: 初始化传输(无论上传还是下载)</li>
 <li>server: 远端</li>
 </ul>
 </li>
@@ -449,11 +449,11 @@ IPv6：128位地址</p>
 </ul>
 </li>
 </ul>
-<h3 id="域名系统dns-domain-name-system">域名系统DNS（Domain Name System）</h3>
+<h3 id="域名系统dns-domain-name-system">域名系统DNS(Domain Name System)</h3>
 <p>互联网中使用IP地址寻址主机</p>
 <p>DNS基本思想：</p>
 <ul>
-<li>名字和地址映射关系分布式存放，形成具有层次结构的分布式数据库系统（分布式管理）</li>
+<li>名字和地址映射关系分布式存放，形成具有层次结构的分布式数据库系统(分布式管理)</li>
 <li>通过查询分布式数据库，获得名字到地址的映射，或相反</li>
 </ul>
 <p>关键：</p>
@@ -463,7 +463,7 @@ IPv6：128位地址</p>
 </ul>
 <p><img src="https://s2.loli.net/2021/12/30/96iWGVjezCDtTwn.png" alt="image-20211230183539098"></p>
 <p>DNS服务器组织</p>
-<p>顶级域名服务器（Top-Level Domain, TLD）</p>
+<p>顶级域名服务器(Top-Level Domain, TLD)</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://root-servers.org">根服务器</a></li>
 <li>负责顶级域名的解析</li>
@@ -471,14 +471,14 @@ IPv6：128位地址</p>
 <p>授权域名服务器</p>
 <ul>
 <li>对于名字与地址映射，保留其初始数据来源的服务器</li>
-<li>主要区分名字与地址映射是原始的还是被缓存的（非授权）</li>
+<li>主要区分名字与地址映射是原始的还是被缓存的(非授权)</li>
 </ul>
-<p>本地域名服务器（或称默认域名服务器）</p>
+<p>本地域名服务器(或称默认域名服务器)</p>
 <ul>
-<li>一般每个ISP都部署有域名服务器，其用户可将该服务器设置成本地域名服务器（或默认域名服务器）</li>
-<li>当进行域名解析时，查询请求首先发送到本地域名服务器（即查询的起点）</li>
+<li>一般每个ISP都部署有域名服务器，其用户可将该服务器设置成本地域名服务器(或默认域名服务器)</li>
+<li>当进行域名解析时，查询请求首先发送到本地域名服务器(即查询的起点)</li>
 </ul>
-<p>域名解析：名字到地址映射（通过名字查地址）</p>
+<p>域名解析：名字到地址映射(通过名字查地址)</p>
 <ul>
 <li>分布式：层级的服务器组织，协同实现解析</li>
 <li>有效性：大多数解析可以在本地完成，一部分会产生互联网流量</li>
@@ -521,11 +521,11 @@ IPv6：128位地址</p>
 <ul>
 <li>域名服务器：
 <ul>
-<li>保存名字到地址映射关系（数据库）</li>
+<li>保存名字到地址映射关系(数据库)</li>
 <li>接收客户端请求，并给出响应</li>
 </ul>
 </li>
-<li>域名解析器（客户端）：
+<li>域名解析器(客户端)：
 <ul>
 <li>请求域名解析的客户进程</li>
 <li>向域名服务器发起解析请求，并等待服务器的响应</li>
@@ -536,16 +536,16 @@ IPv6：128位地址</p>
 <p><img src="https://s2.loli.net/2021/12/31/DIbMfJm3a41nuPz.png" alt="image-20211231041632897"></p>
 <p>服务器</p>
 <ul>
-<li>Web页面（HTML文档）：包含到多种对象的链接</li>
+<li>Web页面(HTML文档)：包含到多种对象的链接</li>
 <li>对象：可以是 HTML文档、图像文件、视频文件、声音文件、脚本文件等</li>
-<li>对象用URL（统一资源定位符）编址：<strong>协议类型://主机名//路径和文件名</strong></li>
+<li>对象用URL(统一资源定位符)编址：<strong>协议类型://主机名//路径和文件名</strong></li>
 </ul>
 <p>客户端</p>
 <ul>
 <li>发出请求、接收响应、解释HTML文档并显示</li>
 <li>有些对象需要浏览器安装插件</li>
 </ul>
-<p>HTTP（HyperText Transfer Protocol）</p>
+<p>HTTP(HyperText Transfer Protocol)</p>
 <ul>
 <li>传输层通常使用TCP协议，缺省使用TCP的80端口</li>
 <li>HTTP为无状态协议，服务器端不保留之前请求的状态信息
@@ -556,13 +556,13 @@ IPv6：128位地址</p>
 </li>
 <li>HTTP标准
 <ul>
-<li>HTTP/1.0: RFC 1945（1996年）
+<li>HTTP/1.0: RFC 1945(1996年)
 <ul>
 <li>每请求一个文件都要建立连接和断开</li>
 <li>eg:请求一个index.html，里面包含3张jpg图片，先发送html文件，后重新建立三次连接发送图片</li>
 </ul>
 </li>
-<li>HTTP/1.1: RFC 2616（1999年）
+<li>HTTP/1.1: RFC 2616(1999年)
 <ul>
 <li>HTTP 1.1的问题</li>
 <li>队头阻塞问题
@@ -588,7 +588,7 @@ IPv6：128位地址</p>
 </li>
 </ul>
 </li>
-<li>HTTP/2: RFC 7540（2015年）、RFC 8740（2020年）
+<li>HTTP/2: RFC 7540(2015年)、RFC 8740(2020年)
 <ul>
 <li>二进制分帧传输
 <ul>
@@ -612,8 +612,8 @@ IPv6：128位地址</p>
 <li>Stream ID：标识一个流。客户端创建的流，ID为奇数；服务器创建的流，ID为偶数；0x00和0x01用于特定场景；Stream ID 不能重复使用，如果一条连接上ID分配完，会新建一条连接。接收端通过Stream ID进行消息的组装。</li>
 </ul>
 </li>
-<li>流创建：发送和接收到HEADERS帧（包含新Stream ID）时创建</li>
-<li>流优先级：可以依据重要性为流设置不同的优先级（1~256），在HEADERS帧中承载</li>
+<li>流创建：发送和接收到HEADERS帧(包含新Stream ID)时创建</li>
+<li>流优先级：可以依据重要性为流设置不同的优先级(1~256)，在HEADERS帧中承载</li>
 </ul>
 </li>
 <li>服务器推送：提高响应速度
@@ -621,7 +621,7 @@ IPv6：128位地址</p>
 <li>服务器在请求之前先推送响应信息到客户端，推送的响应信息可以在客户端被缓存</li>
 </ul>
 </li>
-<li>HTTP头压缩（HPACK）
+<li>HTTP头压缩(HPACK)
 <ul>
 <li>请求头由大量的键值组成，多个请求的键值重复程度很高</li>
 <li>静态表：定义通用HTTP头域，常用键值无需重复传送，直接引用内部字典的整数索引</li>
@@ -655,7 +655,7 @@ IPv6：128位地址</p>
 </ul>
 <p>HTTP报文类型</p>
 <ul>
-<li>HTTP两种报文：请求(request)、响应(response）</li>
+<li>HTTP两种报文：请求(request)、响应(response)</li>
 <li>HTTP请求报文：采用ASCII，数据部分采用MIME格式
 <ul>
 <li><img src="https://s2.loli.net/2021/12/31/C2MqVlQL16kovxy.png" alt="image-20211231042351105"></li>
@@ -758,9 +758,9 @@ IPv6：128位地址</p>
 <p><img src="https://s2.loli.net/2021/12/31/ZMUPObjTRiFwEnA.png" alt="image-20211231043947154"></p>
 <p><img src="https://s2.loli.net/2021/12/31/smEkrBd5QFT1O9Y.png" alt="image-20211231044010995"></p>
 <h3 id="内容分发网络cdn-content-distribution-network">内容分发网络CDN(Content Distribution Network)</h3>
-<p>基本思想源于MIT对Web服务瞬间拥塞问题的解决（1998）</p>
+<p>基本思想源于MIT对Web服务瞬间拥塞问题的解决(1998)</p>
 <ul>
-<li>一种Web缓存系统，靠近网络边缘（用户）提供内容服务</li>
+<li>一种Web缓存系统，靠近网络边缘(用户)提供内容服务</li>
 <li>目前提供更丰富的服务，包括静态内容、流媒体、用户上传视频等</li>
 </ul>
 <p>主要优点</p>
@@ -776,7 +776,7 @@ IPv6：128位地址</p>
 <li>负载均衡DNS需要收集CDN服务器的位置和负载情况</li>
 <li>如果找不到被请求的对象，需要从原始服务器获取</li>
 </ul>
-<h3 id="动态自适应流媒体协议dashdynamic-adaptive-streaming-over-http-重点">动态自适应流媒体协议DASHDynamic Adaptive Streaming over HTTP)（重点）</h3>
+<h3 id="动态自适应流媒体协议dashdynamic-adaptive-streaming-over-http-重点">动态自适应流媒体协议DASHDynamic Adaptive Streaming over HTTP)(重点)</h3>
 <p>基本思想：</p>
 <ul>
 <li>完整视频被拆分为固定时长(2s-10s)、不同码率的视频片段(segment)</li>
@@ -787,7 +787,7 @@ IPv6：128位地址</p>
 </ul>
 </li>
 </ul>
-<p>自适应码率（Adaptive bitrate，ABR）规则</p>
+<p>自适应码率(Adaptive bitrate，ABR)规则</p>
 <ul>
 <li><img src="https://s2.loli.net/2021/12/31/6omO3QPRnuV4LxC.png" alt="image-20211231050348506"></li>
 </ul>
@@ -798,8 +798,8 @@ IPv6：128位地址</p>
 <li>数据包传输存在的问题：延迟、乱序、出错、丢失等</li>
 <li>传输层解决的问题之一：可靠性，向应用层提供可靠服务</li>
 <li>应用层运行多个应用进程</li>
-<li>共享单一的网络层协议（IP）和网络接口</li>
-<li>传输层解决的问题之二：复用（Multiplexing）和分用（Demultiplexing）</li>
+<li>共享单一的网络层协议(IP)和网络接口</li>
+<li>传输层解决的问题之二：复用(Multiplexing)和分用(Demultiplexing)</li>
 </ul>
 <h3 id="tcp-ip体系结构中传输层协议与服务">TCP/IP体系结构中传输层协议与服务</h3>
 <p>传输层协议的基本功能</p>
@@ -812,23 +812,23 @@ IPv6：128位地址</p>
 <li>发送端：将应用层的消息封装成传输层的数据单元，传递到网络层</li>
 <li>接收端：将从网络层接收的传输层数据单元，处理后交给应用层</li>
 </ul>
-<p>传输控制协议TCP（Transport Control Protocol）</p>
+<p>传输控制协议TCP(Transport Control Protocol)</p>
 <ul>
 <li>为进程间通信提供面向连接的、可靠的传输服务</li>
 <li>实现复用分用、差错检测、确认重传、流量控制等传输层功能</li>
 </ul>
-<p>用户数据报协议UDP（User Datagram Protocol）</p>
+<p>用户数据报协议UDP(User Datagram Protocol)</p>
 <ul>
 <li>为进程间通信提供非连接的、不可靠的传输服务</li>
 <li>实现复用分用、差错检测等传输层功能</li>
 </ul>
-<h3 id="用户数据报协议-udp">用户数据报协议（UDP）</h3>
+<h3 id="用户数据报协议-udp">用户数据报协议(UDP)</h3>
 <p>UDP协议特点</p>
 <ul>
 <li>发送方和接收方<strong>不需要握手过程</strong></li>
-<li>每个UDP数据单元（数据报）<strong>独立传输</strong></li>
+<li>每个UDP数据单元(数据报)<strong>独立传输</strong></li>
 <li>提供复用分用功能和<strong>可选</strong>的差错检测功能</li>
-<li>支持组播通信（点到多点通信）</li>
+<li>支持组播通信(点到多点通信)</li>
 <li>不提供可靠性保证：无确认重传、可能有出错、丢失、乱序等现象</li>
 </ul>
 <p>UDP数据报格式</p>
@@ -840,7 +840,7 @@ IPv6：128位地址</p>
 <p>进程标识：目的IP地址+目的端口号</p>
 <p>UDP数据报的差错检测</p>
 <ul>
-<li>可选项，利用数据报中携带冗余位（校验和域段）来检测数据报传输过程中出现的差错</li>
+<li>可选项，利用数据报中携带冗余位(校验和域段)来检测数据报传输过程中出现的差错</li>
 <li>发送端：利用自己产生的伪首部和发送的UDP数据报计算校验和</li>
 <li>接收端：利用自己产生的伪首部和接收的UDP数据报计算校验和</li>
 <li>伪首部：包含源IP地址、目的IP地址、协议类型等域段</li>
@@ -852,7 +852,7 @@ IPv6：128位地址</p>
 <ul>
 <li>IPv4中UDP校验和是可选项，IPv6中变成强制项
 <ul>
-<li>0无，非0有（如果计算结果为0，则以全1代替）</li>
+<li>0无，非0有(如果计算结果为0，则以全1代替)</li>
 </ul>
 </li>
 <li>UDP校验和覆盖的范围超出了UDP数据报本身，使用伪首部的目的是检验UDP数据报是否到达真正的目的地
@@ -871,7 +871,7 @@ IPv6：128位地址</p>
 <p>IP首部、ICMP、UDP、TCP都需要计算校验和，方法类似</p>
 <p>使用UDP服务的应用：</p>
 <ul>
-<li>流媒体应用（实时音频和视频）通常使用UDP服务
+<li>流媒体应用(实时音频和视频)通常使用UDP服务
 <ul>
 <li>能够容忍一定的丢失</li>
 <li>对时延敏感</li>
@@ -893,7 +893,7 @@ IPv6：128位地址</p>
 <li>无拥塞控制</li>
 </ul>
 <h3 id="可靠数据传输">可靠数据传输</h3>
-<p>rdt：reliable data transfer protocol（可靠数据传输协议）</p>
+<p>rdt：reliable data transfer protocol(可靠数据传输协议)</p>
 <p>停等机制：发送端发送一个分组，然后等待接收端响应</p>
 <p>两种典型的流水线协议：</p>
 <ul>
@@ -941,11 +941,11 @@ IPv6：128位地址</p>
 </ul>
 </li>
 </ul>
-<h3 id="传输控制协议-tcp">传输控制协议（TCP）</h3>
+<h3 id="传输控制协议-tcp">传输控制协议(TCP)</h3>
 <p>TCP协议特点提供可靠服务：按序、可靠交付</p>
 <ul>
 <li>提供字节流服务，不识别消息边界可靠传输机制</li>
-<li>提供差错检测（校验和）功能，正确接收返回确认</li>
+<li>提供差错检测(校验和)功能，正确接收返回确认</li>
 <li>使用序列号检测丢失和乱序</li>
 <li>超时重传机制，解决出错、丢失问题</li>
 <li>支持流水线机制，自适应窗口</li>
@@ -964,16 +964,16 @@ IPv6：128位地址</p>
 <li>头长度：四个字节为计数单位，包含选项部分</li>
 <li>接收窗口通告：指示接收缓冲区可接收的字节数</li>
 <li>标志位：URG, ACK, PUSH, RESET, SYN, FIN</li>
-<li>选项格式：Kind（1字节）|Length（1字节）|Info（n字节）</li>
+<li>选项格式：Kind(1字节)|Length(1字节)|Info(n字节)</li>
 </ul>
 <p>TCP连接与复用、分用机制</p>
 <ul>
 <li>通信之前通过三次握手建立TCP连接
 <ul>
-<li>分配缓冲区、协商参数（初始序号、接收缓冲区大小、最大段尺寸等）</li>
+<li>分配缓冲区、协商参数(初始序号、接收缓冲区大小、最大段尺寸等)</li>
 </ul>
 </li>
-<li>连接标识（四元组）：源IP地址、目的IP地址、源端口号、目的端口号</li>
+<li>连接标识(四元组)：源IP地址、目的IP地址、源端口号、目的端口号</li>
 <li>通过建立的TCP连接为应用进程提供可靠的字节流服务</li>
 </ul>
 <p><img src="https://s2.loli.net/2021/12/31/PSk5mrhXMDI2wA8.png" alt="image-20211231153628750"></p>
@@ -1003,9 +1003,9 @@ IPv6：128位地址</p>
 </tr>
 </tbody>
 </table>
-<p>TCP采用自适应方法计算重传超时时间（原因？）</p>
+<p>TCP采用自适应方法计算重传超时时间(原因？)</p>
 <ul>
-<li>基于往返时间（RTT）确定重传超时间（RTO）</li>
+<li>基于往返时间(RTT)确定重传超时间(RTO)</li>
 </ul>
 <p>问题：如何准确估算</p>
 <ul>
@@ -1032,12 +1032,12 @@ IPv6：128位地址</p>
 </ul>
 <p>TCP定时器:</p>
 <ul>
-<li>连接建立定时器（75秒）</li>
-<li>重传定时器（RTO）</li>
-<li>延迟ACK定时器（500毫秒）</li>
-<li>持续定时器（避免0窗口死锁）</li>
-<li>保活定时器（避免半打开）</li>
-<li>静默定时器（避免端口号重用等）</li>
+<li>连接建立定时器(75秒)</li>
+<li>重传定时器(RTO)</li>
+<li>延迟ACK定时器(500毫秒)</li>
+<li>持续定时器(避免0窗口死锁)</li>
+<li>保活定时器(避免半打开)</li>
+<li>静默定时器(避免端口号重用等)</li>
 </ul>
 <h3 id="理解网络拥塞">理解网络拥塞</h3>
 <p>拥塞控制方法：两种广泛使用的拥塞控制方法</p>
@@ -1052,7 +1052,7 @@ IPv6：128位地址</p>
 <li>网络辅助的拥塞控制
 <ul>
 <li>路由器提供到端系统的反馈</li>
-<li>例如：可以使用1位指示拥塞（如X.25, ATM）</li>
+<li>例如：可以使用1位指示拥塞(如X.25, ATM)</li>
 </ul>
 </li>
 </ul>
@@ -1070,7 +1070,7 @@ IPv6：128位地址</p>
 <li>慢启动阶段
 <ul>
 <li>初始拥塞窗口：cwnd=1(MSS)</li>
-<li>每个RTT，cwnd翻倍（指数增长）</li>
+<li>每个RTT，cwnd翻倍(指数增长)</li>
 <li>每接收到一个ACK，cwnd增1(MSS)</li>
 <li>当<strong>连接初始建立</strong>或<strong>报文段超时未得到确认时</strong>，TCP拥塞控制进入慢启动阶段</li>
 <li>特点：<strong>初始值小，增长速度快</strong></li>
@@ -1079,7 +1079,7 @@ IPv6：128位地址</p>
 <li>拥塞避免阶段
 <ul>
 <li>阈值ssthresh：拥塞窗口达到该阈值时，慢启动阶段结束，进入拥塞避免阶段</li>
-<li>每个RTT，cwnd增1（线性增长）</li>
+<li>每个RTT，cwnd增1(线性增长)</li>
 <li>注意：TCP使用字节计数，当收到ACK时，拥塞窗口计算如下：
 <ul>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi><mo>=</mo><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi><mo>+</mo><mi>M</mi><mi>S</mi><mi>S</mi><mo>×</mo><mfrac><mrow><mi>M</mi><mi>S</mi><mi>S</mi></mrow><mrow><mi>c</mi><mi>w</mi><mi>n</mi><mi>d</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">cwnd = cwnd + MSS \times \frac{MSS}{cwnd}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.217331em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">c</span><span class="mord mathdefault mtight" style="margin-right:0.02691em;">w</span><span class="mord mathdefault mtight">n</span><span class="mord mathdefault mtight">d</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
@@ -1095,11 +1095,11 @@ IPv6：128位地址</p>
 <li>cwnd=1，进入慢启动阶段</li>
 </ul>
 </li>
-<li>通过三次重复ACK检测丢失（TCP RENO算法）：
+<li>通过三次重复ACK检测丢失(TCP RENO算法)：
 <ul>
 <li>阈值ssthresh = cwnd/2</li>
-<li>cwnd= ssthresh+3，进入线性增长（拥塞避免阶段）</li>
-<li>注：重复ACK指明网络仍可以交付一些报文段（拥塞不严重）</li>
+<li>cwnd= ssthresh+3，进入线性增长(拥塞避免阶段)</li>
+<li>注：重复ACK指明网络仍可以交付一些报文段(拥塞不严重)</li>
 </ul>
 </li>
 <li>TCP Tahoe算法对于两种丢失情况均将cwnd设成1，并进入慢启动阶段</li>
@@ -1117,8 +1117,8 @@ IPv6：128位地址</p>
 </ul>
 <p>网络层关键功能</p>
 <ul>
-<li>路由（控制面）: 决定数据包从源主机到目的主机的路径核心：路由算法与路由协议</li>
-<li>转发（数据面）: 将数据包从路由器的输入接口送到输出接口的过程</li>
+<li>路由(控制面): 决定数据包从源主机到目的主机的路径核心：路由算法与路由协议</li>
+<li>转发(数据面): 将数据包从路由器的输入接口送到输出接口的过程</li>
 </ul>
 <h3 id="ip协议-ip服务">IP协议- IP服务</h3>
 <p>IP层服务</p>
@@ -1130,7 +1130,7 @@ IPv6：128位地址</p>
 <li>数据包独立转发，相同源-目的的数据包可能经过不同的路径</li>
 </ul>
 </li>
-<li>尽力而为（Best-effort）的不可靠服务
+<li>尽力而为(Best-effort)的不可靠服务
 <ul>
 <li>数据包可能会产生较长的时延</li>
 <li>数据包可能会丢失、失序、重复</li>
@@ -1141,7 +1141,7 @@ IPv6：128位地址</p>
 <h4 id="ipv4">IPv4</h4>
 <p>IPv4地址</p>
 <ul>
-<li>IP地址：32位二进制逻辑地址（四部分，0~255），实现互联网络统一编址，标识主机和路由器的接口</li>
+<li>IP地址：32位二进制逻辑地址(四部分，0~255)，实现互联网络统一编址，标识主机和路由器的接口</li>
 <li>接口：将主机和路由器连接到物理网络
 <ul>
 <li>路由器一般有多个接口</li>
@@ -1152,8 +1152,8 @@ IPv6：128位地址</p>
 <li>IP地址表示：点分割的十进制，如：223.1.1.1</li>
 <li>IP地址层次：
 <ul>
-<li>网络号部分（net-id）</li>
-<li>主机号部分（host-id）</li>
+<li>网络号部分(net-id)</li>
+<li>主机号部分(host-id)</li>
 </ul>
 </li>
 <li>什么是一个IP网络：
@@ -1167,7 +1167,7 @@ IPv6：128位地址</p>
 <p><img src="https://s2.loli.net/2021/12/31/FEDiy6RS3QOM4tV.png" alt="image-20211231234113153"></p>
 <p>IPv4地址：如何获取</p>
 <ul>
-<li>公有IP地址要求全球唯一，由区域互联网注册机构（RIR，Regional Internet Registry）或ISP分配</li>
+<li>公有IP地址要求全球唯一，由区域互联网注册机构(RIR，Regional Internet Registry)或ISP分配</li>
 <li>静态设定：
 <ul>
 <li>申请固定IP地址，手工设定</li>
@@ -1212,9 +1212,9 @@ IPv6：128位地址</p>
 <ul>
 <li>私有IP地址的使用
 <ul>
-<li>可以在私有网络（本地网络）中自由使用，但不能出现在公网上</li>
+<li>可以在私有网络(本地网络)中自由使用，但不能出现在公网上</li>
 <li>如果数据包要进入公网，需要进行私有地址到公有地址的转换</li>
-<li>承担地址转换的设备称为NAT（Network Address Translation）</li>
+<li>承担地址转换的设备称为NAT(Network Address Translation)</li>
 </ul>
 </li>
 <li>本地网络使用私有IP地址，NAT 面向公网侧使用公网IP地址
@@ -1224,23 +1224,23 @@ IPv6：128位地址</p>
 <li>安全性增强</li>
 </ul>
 </li>
-<li>NAT 的基本实现方法离开本地网络的数据包：用（NAT 的IP地址+新端口号）代替（源IP地址+端口号），远端的主机返回的数据包将使用（NAT 的IP地址+新端口号）作为目的IP地址和目的端口
+<li>NAT 的基本实现方法离开本地网络的数据包：用(NAT 的IP地址+新端口号)代替(源IP地址+端口号)，远端的主机返回的数据包将使用(NAT 的IP地址+新端口号)作为目的IP地址和目的端口
 <ul>
-<li>NAT 在转换表中记录（NAT 的IP地址+新端口号）到（源IP地址+端口号）的映射</li>
+<li>NAT 在转换表中记录(NAT 的IP地址+新端口号)到(源IP地址+端口号)的映射</li>
 </ul>
 </li>
-<li>进入本地网络的数据包：用转换表中的（源IP地址+端口号）替换数据包中的目的IP地址和端口号（NAT 的IP地址+新端口号）</li>
+<li>进入本地网络的数据包：用转换表中的(源IP地址+端口号)替换数据包中的目的IP地址和端口号(NAT 的IP地址+新端口号)</li>
 </ul>
 <h4 id="ipv6">IPv6</h4>
 <p>IPv6互联网的优势</p>
 <ul>
-<li>解决地址耗尽问题：更大的地址空间（32位→128位）
+<li>解决地址耗尽问题：更大的地址空间(32位→128位)
 <ul>
 <li>340,282,366,920,938,463,463,374,607,431,768,211,456个IP地址</li>
 <li>地球上每平方米范围：6.67×1023个IP地址</li>
 </ul>
 </li>
-<li>自动配置的支持（即插即用）
+<li>自动配置的支持(即插即用)
 <ul>
 <li>无状态地址自动配置</li>
 <li>有状态地址自动配置：对DHCP协议改进和扩展，网络管理更加方便和快捷</li>
@@ -1279,31 +1279,426 @@ IPv6：128位地址</p>
 <h3 id="icmp协议">ICMP协议</h3>
 <p>ICMP: 互联网控制消息协议</p>
 <p><img src="https://s2.loli.net/2022/01/01/726xsaDrmcMYtlK.png" alt="image-20220101040334497"></p>
-<h3 id="路由算法-控制面">路由算法（控制面）</h3>
+<h3 id="路由算法">路由算法</h3>
 <p>目标：确定从源主机到目的主机的最优路径</p>
-<p>最优路径：一般为代价最小的路径代价：有不同的定义方法，例如：距离、时延、费用、拥塞等</p>
+<p>最优路径：一般为代价最小的路径</p>
+<ul>
+<li>代价：有不同的定义方法，例如：距离、时延、费用、拥塞等</li>
+</ul>
 <p>路由算法的分布式实现</p>
 <ul>
 <li>路由器之间交互路由信息或链路状态信息</li>
 <li>每台路由器独立计算最优路径</li>
 </ul>
 <p>相对于数据包转发，所有路由协议的开销都属于额外管理开销</p>
-<h3 id="互联网路由协议：rip-ospf-bgp">互联网路由协议：RIP, OSPF, BGP</h3>
-<h3 id="软件定义网络-sdn">软件定义网络（SDN）</h3>
+<p>网络结构的图抽象</p>
+<ul>
+<li>路由器：图中的点</li>
+<li>物理链路：图中的边</li>
+<li>代价：图中边的权值</li>
+</ul>
+<p>用G = (N, E) 表示图</p>
+<ul>
+<li>N = { u, v, w, x, y, z }，路由器集合</li>
+<li>E = { (u, v), (u, x), (v, x), (v, w), (x, w),(x,y), (w,y), (w,z), (y,z) } ，链路的集合</li>
+<li><img src="https://s2.loli.net/2022/01/06/9AaEyulJpTFowZt.png" alt="image-20220106062001540"></li>
+</ul>
+<p>链路代价：相邻节点之间的代价值，表示为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>x</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">c(x_i,x_j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<ul>
+<li>如果xi和xj不相邻，链路代价记为无穷</li>
+<li>例如, c(w, z) = 5</li>
+</ul>
+<p>路径代价：路径上所有链路代价和</p>
+<ul>
+<li>例如，路径<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>3</mn></msub><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><msub><mi>x</mi><mi>p</mi></msub><mo stretchy="false">)</mo><mtext>的代价</mtext><mo>=</mo><mi>c</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>+</mo><mi>c</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>+</mo><mi>c</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>p</mi><mo>−</mo><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mi>x</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_1, x_2,x_3,..., x_p)的代价= c(x_1,x_2) + c(x_2,x_3) + ... + c(x_{p-1},x_p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">代</span><span class="mord cjk_fallback">价</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/338414118">Dijkstra算法详解</a></p>
+<p>Bellman-Ford公式<br>
+假设：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">D_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>(y) = 从x到y最小代价路径的代价值<br>
+则：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">D_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>(y) = min { c(x,m) + Dm(y) }</p>
+<ul>
+<li>m为x的邻居</li>
+</ul>
+<p>距离向量路由算法</p>
+<ul>
+<li>算法符号定义
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">D_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>(y) = 从x到y最小代价路径的代价值节点x可以获知到每个邻居的链路代价c(x, m)</li>
+<li>节点x维护自己的距离向量<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub><mo>=</mo><mo stretchy="false">[</mo><msub><mi>D</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">D_x = [D_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>(y): y єN ]</li>
+<li>节点x维护其邻居的距离向量，对于每个邻居m，x维护<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>m</mi></msub><mo>=</mo><mo stretchy="false">[</mo><msub><mi>D</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">D_m = [D_m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>(y): y єN ]</li>
+</ul>
+</li>
+<li>基本思想
+<ul>
+<li>当节点的距离向量值发生变化时，向邻居节点发送自己的距离向量</li>
+<li>如果节点x接收到邻居节点发送的距离向量，使用Bellman-Ford公式重新计算到所有其他节点的路径代价
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>←</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>m</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>D</mi><mi>m</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">D_x(y) ← min {c(x,m) + D_m(y)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault">c</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></span>    每个节点y ∊N</li>
+</ul>
+</li>
+<li>经过反复迭代，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>x</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">D_x(y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span>会逐渐收敛到实际的最小路径代价值</li>
+</ul>
+</li>
+</ul>
+<h3 id="互联网路由协议">互联网路由协议</h3>
+<p>扩展性问题</p>
+<ul>
+<li>络路由表庞大，存储、查找困难</li>
+<li>路由信息交互量大，额外开销高</li>
+</ul>
+<p>管理的自治问题</p>
+<ul>
+<li>互联网由大量自治域构成</li>
+<li>每个自治域独立管理，每个自治域可能运行不同的路由协议</li>
+</ul>
+<p>层次化路由</p>
+<ul>
+<li>自治域内路由
+<ul>
+<li>相同的自治域中的所有路由器运行相同的自治域内路由协议</li>
+<li>不同的自治域的路由器可以运行不同的自治域内路由协议</li>
+<li>网关路由器(或边界路由器)：与其他自治域的路由器相连接的路由器</li>
+</ul>
+</li>
+<li>自治域间路由
+<ul>
+<li>不同自治域网关路由器(或边界路由器)之间运行的路由协议</li>
+<li>网关路由器：既执行自治域内的路由协议，也执行路由器之间的路由协议
+<ul>
+<li>路由表由自治域内和自治域间路由算法产生</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>运行协议</p>
+<ul>
+<li>自治域内路由：也称为内部网关协议IGP
+<ul>
+<li>路由信息协议RIP: Routing Information Protocol
+<ul>
+<li>使用距离向量法</li>
+<li>两种基本的报文类型
+<ul>
+<li>请求报文</li>
+<li>响应报文</li>
+</ul>
+</li>
+<li>定期发送通告：相邻路由器每隔30秒发送一次响应报文
+<ul>
+<li>IP目的地址：255.255.255.255(本地广播地址)</li>
+<li>跳步数定义：直接相连=1</li>
+<li>每个通告可以最多携带25个目的网络</li>
+</ul>
+</li>
+<li>触发更新：如果发现链路失效或变化，立即发送响应报文</li>
+<li>如果超过180秒没有接收到邻居通告，则认为链路失效
+<ul>
+<li>通过邻居的路径失效</li>
+<li>向邻居发送通告</li>
+<li>如果邻居的路由表项发生变化，则继续通告</li>
+<li>链路失效信息会传播到整个网络</li>
+<li>使用毒性逆转可以防止暂时环路的产生</li>
+<li>设置16跳为无穷值，提高收敛速度</li>
+</ul>
+</li>
+<li>RIP协议在应用层实现
+<ul>
+<li>路由器中运行守候进程(routed)</li>
+<li>使用UDP的520端口</li>
+<li>发送和接收RIP报文，管理路由表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开放最短路径优先协议OSPF: Open Shortest Path First
+<ul>
+<li>几个概念
+<ul>
+<li>邻居(Neighbor)：两台路由器属于相同的IP网络，并通过交换Hello报文协商成功，则可以成为邻居</li>
+<li>邻接关系(Adjacency)：形成邻居关系后，如果两台路由器成功交换DBD(数据库描述)报文以及LSA，则建立邻接关系</li>
+<li>链路状态通告(Link State Advertisement，LSA)：每台路由器会在所有形成邻接关系的邻居之间发送LSA，LSA描述了路由器的链路、接口、邻居等信息</li>
+<li>链路状态数据库(LSDB)：路由器将收到的LSA记录在LSDB中，并发送LSA拷贝给该路由器的其他所有邻居。当LSA传播到整个区域后，区域内所有的路由器都会形成同样的LSDB</li>
+</ul>
+</li>
+<li>OSPF直接运行在IP协议之上，OSPF报文由IP数据包直接承载，协议类型为89</li>
+<li><img src="https://s2.loli.net/2022/01/06/5UDPCgy8x1cb3Iu.png" alt="image-20220106075537488"></li>
+<li>三张表
+<ul>
+<li>邻居列表：列出全部已经建立邻接关系的邻居路由器</li>
+<li>链路状态数据库：列出网络中其他路由器的信息，由此显示全网的网络拓扑</li>
+<li>路由表：列出通过最短路径优先算法计算出到达每个相连网络的最佳路径</li>
+</ul>
+</li>
+<li>OSPF工作过程</li>
+<li>邻居发现
+<ul>
+<li>通过Hello报文发现并形成邻居关系，建立邻居表</li>
+</ul>
+</li>
+<li>路由通告
+<ul>
+<li>邻接路由器之间通过LSU洪泛LSA，通告链路状态信息，最终区域内所有路由器的LSDB完全相同，即实现同步</li>
+<li>通过DBD、LSR、LSACK辅助LSA的同步</li>
+</ul>
+</li>
+<li>路由计算
+<ul>
+<li>LSDB同步后，每台路由器独立计算最优路由，将最优路由信息写入路由表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>中间系统到中间系统路由协议IS-IS：Intermediate System-to-Intermediate System (ISO)</li>
+<li>内部网关路由协议IGRP: Interior Gateway Routing Protocol (Cisco)</li>
+</ul>
+</li>
+<li>自治域间路由
+<ul>
+<li>边界网关协议BGP-4: Border Gateway Protocol</li>
+<li>目前互联网中唯一实际运行的自治域间的路由协议</li>
+<li><strong>BGP</strong>功能
+<ul>
+<li>eBGP: 从相邻的AS获得网络可达信息</li>
+<li>iBGP: 将网络可达信息传播给AS内的路由器</li>
+<li>基于网络可达信息和策略决定到其他网络的“最优”路由</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="软件定义网络-sdn">软件定义网络(SDN)</h3>
+<p>软件定义网络核心思想</p>
+<ul>
+<li>解耦：
+<ul>
+<li>将控制平面和数据平面进行分离，解决传统网络中控制平面和数据平面在物理上紧耦合导致的问题解决的问题</li>
+<li>控制平面和数据平面之间不需要相互依赖，只需要遵循一定的开放接口即可进行通信</li>
+<li>控制平面：负责决策控制，由软件实现，灵活</li>
+<li>数据平面：专注数据转发，可有由通用硬件实现</li>
+</ul>
+</li>
+<li>抽象：
+<ul>
+<li>转发抽象：将数据平面抽象为通用的转发模型，如Openflow的交换机模型，各种转发表项，如MAC地址表、路由表、NAT 转换表等，抽象为统一的流表</li>
+<li>分布状态抽象：控制层将设备的分布状态，抽象成全局的网络视图，从而实现逻辑的集中控制，具体可以通过网络操作系统来实现
+<ul>
+<li>网络操作系统（NOS）：下发控制命令，收集设备和链路状态，为上层应用提供全局网络视图</li>
+</ul>
+</li>
+<li>配置抽象：网络行为的表达通过编程语言实现，将抽象配置映射为物理配置，利用控制器提供的API，通过控制器配置全局设备</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220106090124317.png" alt="image-20220106090124317"></p>
 <h2 id="接口层原理与协议">接口层原理与协议</h2>
 <ul>
-<li>接口层提供同一物理网络中各节点之间的连接和通信</li>
-<li>同一个物理网络必须执行相同的接口层协议</li>
-<li>不同的物理网络接口层协议可以不同</li>
+<li>接口层提供同一<strong>物理网络</strong>中各节点之间的连接和通信</li>
+<li>同一个<strong>物理网络</strong>必须执行相同的接口层协议</li>
+<li>不同的<strong>物理网络</strong>接口层协议可以不同</li>
 </ul>
 <h3 id="接口层基础">接口层基础</h3>
 <p>物理网络连接方式：节点到节点连接、共享式连接、交换式连接</p>
+<p>接口层功能</p>
+<ul>
+<li>物理层：提供位流服务
+<ul>
+<li>传输介质和拓扑结构定义</li>
+<li>编码与解码(数据→信号)</li>
+<li>信号的发送与接收</li>
+<li>时钟同步</li>
+</ul>
+</li>
+<li>数据链路层：提供可靠或不可靠的传输服务
+<ul>
+<li>数据单元及寻址方式定义</li>
+<li>链路层差错检测</li>
+<li>链路层的复用和分用</li>
+<li>可靠数据传输</li>
+<li>共享式连接：提供介质访问控制方法</li>
+<li>交换式连接：数据单元转发</li>
+</ul>
+</li>
+</ul>
+<p>接口层技术分类</p>
+<ul>
+<li>有多种接口层技术，传统上大致可以分成三类
+<ul>
+<li>局域网技术(LAN, Local Area Network )
+<ul>
+<li>如：以太网(Ethernet)、无线局域网(WiFi)</li>
+</ul>
+</li>
+<li>城域网技术(MAN, Metropolitan Area Network)
+<ul>
+<li>如：FDDI、交换式Ethernet</li>
+</ul>
+</li>
+<li>广域网技术Wide Area Network (WAN)
+<ul>
+<li>如：ATM</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>其他接口技术
+<ul>
+<li>个人区域网
+<ul>
+<li>如：蓝牙技术(Bluetooth)</li>
+</ul>
+</li>
+<li>无线传感网络
+<ul>
+<li>如：Zigbee技术</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="局域网体系结构与组网方法">局域网体系结构与组网方法</h3>
+<p>介质访问控制层(Medium Access Control )</p>
+<ul>
+<li>物理节点寻址</li>
+<li>差错控制</li>
+<li>介质访问控制（共享式连接）</li>
+</ul>
+<p>逻辑链路控制层（Logical Link Control）</p>
+<ul>
+<li>
+<p>链路层的复用和分用</p>
+</li>
+<li>
+<p>可靠数据传输</p>
+</li>
+<li>
+<p>共享式局域网</p>
+<ul>
+<li>网络中任一节点发送的信息会被网络中所有节点收到（广播传输）
+<ul>
+<li>例如，共享式以太网，无线局域网，FDDI等</li>
+</ul>
+</li>
+<li>需要协调节点对共享介质的访问
+<ul>
+<li>介质访问控制方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>交换式局域网</p>
+<ul>
+<li>链路采用点到点连接
+<ul>
+<li>例如，交换式以太网</li>
+</ul>
+</li>
+<li>交换机成为网络连接的核心
+<ul>
+<li>完成链路层数据单元的转发</li>
+<li>通常采用统计多路复用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>MAC地址—物理地址</p>
+<ul>
+<li>32位IP地址:
+<ul>
+<li>网络层地址（逻辑地址）：标识主机或路由器的一个接口</li>
+<li>主要用于IP数据包的路由转发</li>
+</ul>
+</li>
+<li>48位MAC地址（物理地址）:
+<ul>
+<li>物理地址：在相同的物理网络中，标识一个节点</li>
+<li>对于大多数局域网，采用48位MAC地址
+<ul>
+<li>位于网卡的ROM或EPROM中</li>
+<li>扁平地址，无层次，需要唯一</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="局域网编址与arp协议">局域网编址与ARP协议</h3>
+<p>ARP协议ARP: Address Resolution Protocol</p>
+<ul>
+<li>局域网的每个IP节点（主机或路由器）都有ARP表</li>
+<li>ARP表缓存IP地址和MAC地址的映射关系</li>
+</ul>
 <h3 id="链路层差错控制">链路层差错控制</h3>
+<p>在数据链路层中，广泛使用循环冗余校验（Cyclic Redundancy Check ）<br>
+CRC校验码计算方法</p>
+<ol>
+<li>设原始数据D为k位二进制位模式</li>
+<li>如果要产生n位CRC校验码，事先选定一个n+1位二进制位模式G（称为生成多项式），G的最高位为1</li>
+<li>将原始数据D乘以<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">2^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span> （相当于在D后面添加n 个0），产生k+n位二进制位模式，用G对该位模式做模2除，得到余数R（n位，不足n位前面用0补齐）即为CRC校验码</li>
+</ol>
+<p><img src="https://s2.loli.net/2022/01/06/KsIS3ClMEv4jNLi.png" alt="image-20220106084342460"></p>
 <h3 id="共享式与交换式以太网">共享式与交换式以太网</h3>
+<p>共享式以太网：连接方式与功能</p>
+<ul>
+<li>连接方式
+<ul>
+<li>方式1：通过同轴电缆连接（10Mbps以太网）</li>
+<li>方式2：通过双绞线、光纤与集线器连接</li>
+</ul>
+</li>
+<li>服务：面向非连接的不可靠服务</li>
+<li>功能
+<ul>
+<li>物理层
+<ul>
+<li>信号编码、时钟同步等，如差分曼彻斯特编码</li>
+</ul>
+</li>
+<li>介质访问控制层
+<ul>
+<li>介质访问控制：CSMA/CD</li>
+<li>差错检测</li>
+</ul>
+</li>
+<li>逻辑链路控制层
+<ul>
+<li>复用与分用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="虚拟局域网">虚拟局域网</h3>
+<p>基于端口的VLAN: 交换机的端口被分组，单个物理交换机能够作为多个虚拟交换机运行</p>
+<p>基于端口VLAN原理：</p>
+<ul>
+<li>隔离通信流量: 来自于或到达端口1-8的流量只能到达1-8
+<ul>
+<li>也可以基于MAC地址定义VLAN</li>
+</ul>
+</li>
+<li>动态配置: 端口能够在VLAN之间动态配置</li>
+<li>VLAN之间转发:类似独立的交换机，通过路由进行转发</li>
+</ul>
 <h3 id="无线局域网">无线局域网</h3>
+<p>802.11无线局域网组网模式</p>
+<p>基础架构模式：</p>
+<ul>
+<li>站点（STA）</li>
+<li>访问点（AP）</li>
+<li>基本服务器（BSS）</li>
+<li>扩展服务器（ESS）</li>
+</ul>
+<p>注：每个BSS中的站点和AP共享同一无线信道；站点通过AP转发数据</p>
+<p>自组织模式：</p>
+<ul>
+<li>站点（STA）</li>
+<li>独立基本服务器（IBSS）</li>
+<li>站点之间直接通信</li>
+<li>共享同一无线信道</li>
+</ul>
+<p>注：每个站点在某个时刻只能工作在一种模式</p>
  
       <!-- reward -->
       
