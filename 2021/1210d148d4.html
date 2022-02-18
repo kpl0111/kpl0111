@@ -156,7 +156,7 @@ IPv6：128位地址</p>
 <p>往返时延RTT (Round-Trip Time)：从发送方发送数据开始，到发送方收到来自接收方的确认，经历的总时间</p>
 <p>时延带宽积</p>
 <ul>
-<li>时延带宽积= 传播时延带宽，即按比特计数的链路长度</li>
+<li>时延带宽积= 传播时延×带宽，即按比特计数的链路长度</li>
 <li>若发送端连续发送数据，则在发送的第一个bit即将达到终点时，发送端就已经发送了时延带宽积个bit ，而这些bit都在链路上向前移动</li>
 </ul>
 <p>如何将端系统连接到边缘路由器？</p>
@@ -902,7 +902,7 @@ IPv6：128位地址</p>
 <li>允许发送端发出N个未得到确认的分组</li>
 <li>需要增加序列号范围
 <ul>
-<li>分组首部中增加k位的序列号，序列号空间为[0, 2k-1]</li>
+<li>分组首部中增加k位的序列号，序列号空间为[0, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2^{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>]</li>
 </ul>
 </li>
 <li>采用累积确认，只确认连续正确接收分组的最大序列号
